@@ -31,13 +31,14 @@ class UserInputController extends Controller
 
         $comp = $list[0]; //todo: get a necessary id
 
+//        $json = $comp->getDate();
 
-        $comp->setDate($comp->getDate()->format('Y-m-d'));
-        $comp->setStartTime($comp->getStartTime()->format('H:i:s'));
-        $comp->setEndTime($comp->getEndTime()->format('H:i:s'));
+//        $comp->setDate($comp->getDate()->format('Y-m-d'));
+//        $comp->setStartTime($comp->getStartTime()->format('H:i:s'));
+//        $comp->setEndTime($comp->getEndTime()->format('H:i:s'));
 
-        $json = $serializer->serialize($comp, 'json');
-
+//        $json = $serializer->serialize($comp, 'json');
+        $json = $comp;
         return $this->render('contents/resultsInput.html.twig', [
             'json' => $json,
         ]);

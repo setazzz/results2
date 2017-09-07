@@ -1,0 +1,15 @@
+<div class="routes">
+    <ol class="buttons">
+        {% for i in 1..numberOfRoutes %}
+            <li id="no{% if loop.index < 10 %}{{ '0' }}{{ loop.index }}{% else %}{{ loop.index }}{% endif %}" class="lvl{{ (loop.index/8)|round(0, 'ceil') }}">
+                <div class="input-btn">
+                    <button class="flash">Flash</button>
+                    <button class="top">Top</button>
+                </div>
+            </li>
+        {% endfor %}
+        {% if json.specChal %}
+            <button class="specChal">Special Challenge</button>
+        {% endif %}
+    </ol>
+</div>

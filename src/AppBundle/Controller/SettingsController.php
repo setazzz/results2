@@ -8,11 +8,9 @@
 
 namespace AppBundle\Controller;
 
-
 use AppBundle\Entity\Comps;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Form\CompsType;
@@ -40,7 +38,7 @@ class SettingsController extends Controller
     /**
      * @Route("/saveComp", name="saveComp")
      */
-    public function SaveCompAction(Request $request)
+    public function CompSaveAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 
@@ -55,15 +53,13 @@ class SettingsController extends Controller
 
             $em->flush();
 
-            return $this->render('contents/test.html.twig', [
+            return $this->render('contents/compSaveOutput.html.twig', [
                 'output' => 'comp saved',
             ]);
         } else {
-            return $this->render('contents/test.html.twig', [
+            return $this->render('contents/compSaveOutput.html.twig', [
                 'output' => 'Something went wrong. Try again',
             ]);
         }
-
-
     }
 }
