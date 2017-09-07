@@ -18,3 +18,4 @@
 /web/bundles/
 /plain
 /app/DoctrineMigrations
+/src/AppBundle/Form/routesForm.txt

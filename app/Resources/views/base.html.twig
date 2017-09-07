@@ -9,6 +9,7 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
+        {% include 'nav.html.twig' %}
         {% block settings %}{% endblock %}
         {% block body %}{% endblock %}
 
