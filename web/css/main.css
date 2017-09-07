@@ -1,0 +1,206 @@
+/* Main selectors ---------------------- */
+
+* {
+    /*border: solid red 2px;*/
+    /*background-color: rgb(215, 255, 253);*/
+}
+
+body {
+    max-width: 510px;
+    margin: auto;
+    font-family: sans-serif;
+}
+
+h1,
+h3 {
+    text-align: center;
+}
+
+button {
+    font-size: 2em;
+    border-style: solid;
+    border-radius: 0.75em;
+    height: 1.5em;
+    max-width: 200px;
+}
+
+#score-top {
+    /*border: solid black;*/
+    padding: 0.2em 0;
+}
+
+.lvl1 button,
+th.column-route.lvl1 {
+    background-color: green;
+}
+
+.lvl2 button,
+th.column-route.lvl2 {
+    background-color: yellow;
+}
+
+.lvl3 button,
+th.column-route.lvl3  {
+    background-color: blue;
+    color: white;
+}
+
+.lvl4 button,
+th.column-route.lvl4 {
+    background-color: red;
+}
+
+.lvl5 button,
+th.column-route.lvl5 {
+    background-color: black;
+    color: white;
+}
+
+button.specChal,
+th.column-chal{
+    background-color: orange;
+    max-width: 98%;
+}
+
+button.specChal {
+    width: 98%;
+}
+
+ol {
+    padding: 0 10%;
+}
+
+/* Table styles ----------------- */
+table * {
+    border: solid black 1px;
+}
+
+table {
+    border-spacing: 0;
+    margin: 0 auto 1em;
+    border: solid blue 1px;
+}
+
+.column-route,
+.column-chal,
+.column-score,
+.column-place {
+    text-align: center;
+}
+
+.column-name {
+    text-align: left;
+    min-width: 100px;
+}
+
+.column-route {
+    min-width: 1em;
+}
+
+.column-flash,
+.column-top {
+    min-width: 2em;
+}
+
+/*Button selectors ------------ */
+
+ol button{
+    background-color: #00ffff;
+    border-color: blue;
+    width: 48%;
+    margin: 0 1%;
+}
+
+.input-btn {
+    margin:auto;
+}
+
+button.y {
+    background-color: deeppink;
+    color: white;
+}
+
+ol li {
+    padding: 1% 0;
+}
+
+
+.score {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.entry-buttons {
+    margin: 0 10%;
+}
+
+.submit, .clear{
+    width: 48%;
+    margin: 0 1%;
+}
+
+.submit {
+    background-color: green;
+    border-color: darkgreen;
+}
+
+.clear {
+    background-color: red;
+    border-color: darkred;
+}
+
+.formList {
+    list-style: none;
+    padding: 0;
+}
+
+.formLine input{
+    margin: auto;
+    display: inline-block;
+    align-content: center;
+}
+
+/* Form selectors ------------ */
+
+form {
+    font-size: 1.5em;
+    margin: auto;
+}
+ul li {
+    margin: auto;
+    width: 60%;
+}
+#userName {
+    font-size: 1.5rem;
+    width: 100%;
+    background-color: white;
+    border: solid blue 1px;
+}
+
+.main-content {
+    max-width: 510px;
+    margin: auto;
+}
+
+/* Responsive ---------------------- */
+
+/* big screen */
+@media only screen and (min-width: 1024px) {
+    body {
+        /*background-color: red;*/
+    }
+}
+
+/* Smallest screen */
+@media only screen and (max-width: 300px) {
+    button {
+        font-size: initial;
+    }
+    .score {
+        font-size: initial;
+    }
+}
+
+.hide {
+    display: none;
+}

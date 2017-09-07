@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Enter Your result{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+        {% block settings %}{% endblock %}
+        {% block body %}{% endblock %}
+
+
+        <script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+        {#<script src="{{ asset('js/bootstrap.min.js') }}"></script>#}
+        <script src="{{ asset('js/SettingsUserInput.js') }}"></script>
+        <script src="{{ asset('js/functions.js') }}"></script>
+        <script src="{{ asset('js/input.js') }}"></script>
+        <script src="{{ asset('js/clickEvents.js') }}"></script>
+        <script src="{{ asset('js/jquery.sticky.js') }}"></script>
+        <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+/**
+ * Created by Matas on 2017.08.01.
+ */
+if (json) {
+    var numberOfRoutes = json.numberOfRoutes;
+console.log(numberOfRoutes);
+    var buttons = '';
+    var score = 0;
+    $('.routes').html(makeButtons(numberOfRoutes));
+
+    $('.score').html(scoreDisplay(score));
+    $('.title').html(json.name);
+    $('.date').html(json.date);
+    $(document).ready(function(){
+        $("#score-top").sticky({topSpacing:0});
+    });
+}

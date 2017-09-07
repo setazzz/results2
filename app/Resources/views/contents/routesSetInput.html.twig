@@ -1,0 +1,24 @@
+
+{#<table>#}
+    {#<tbody>#}
+
+    {#{% for i in 1..2 %}#}
+        {#<tr>#}
+            {#<td>#}
+                {#{{ form_row(form.points1) }}#}
+            {#</td>#}
+            {#<td>#}
+                {#{{ form_row(form.color1) }}#}
+            {#</td>#}
+            {#<td>#}
+                {#{{ form_row(form.setter1) }}#}
+            {#</td>#}
+        {#</tr>#}
+    {#{% endfor %}#}
+    {#</tbody>#}
+{#</table>#}
+
+
+{#{{ form_row(form.Submit) }}#}
+
+{{ form(form) }}
