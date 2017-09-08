@@ -2,26 +2,29 @@
 
 {% block settings %}
     <div id="settings" >
-        {{ json.date|date('Y-m-d') }}
+        {{ comp.date|date('Y-m-d') }}
 
     </div>
 {% endblock %}
 
 {% block body %}
-<h1 class="title"></h1>
-<h3 class="date"></h3>
+    <h1 class="title"></h1>
+    <h3 class="date"></h3>
 
-<a href="results.php" target="_blank">Results</a>
-<div class="input-content">
-    {% include 'forms/userInput.html.twig' %}
-    {% set numberOfRoutes = json.numberOfRoutes %}
-    <div class="score" id="score-top"></div>
-    {% include 'contents/buttons.html.twig' %}
-    <p class="score"></p>
-    <div class="entry-buttons">
-        <button class="clear">Clear</button><button class="submit">Submit</button>
+    <a href="results.php" target="_blank">Results</a>
+    <div class="input-content">
+
+        {% include 'forms/userInput.html.twig' %}
+
+        {% set numberOfRoutes = comp.numberOfRoutes %}
+
+        <div class="score" id="score-top"></div>
+        {% include 'contents/buttons.html.twig' %}
+        <p class="score"></p>
+        <div class="entry-buttons">
+            <button class="clear">Clear</button><button class="submit">Submit</button>
+        </div>
     </div>
-</div>
-<p class="output"></p>
+    <p class="output"></p>
 {% endblock %}
 
