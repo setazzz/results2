@@ -15,8 +15,9 @@
         $("#score-top").sticky({topSpacing:0});
     });
 
+    var standartResultString = '00000000000000000000000000000000000';
     var result = document.getElementById('user_result');
-    result.value = '00000000000000000000000000000000000';
+    result.value = standartResultString;
 
     var total = document.getElementById('user_total');
     total.value = 0;
