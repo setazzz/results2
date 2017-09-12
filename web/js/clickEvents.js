@@ -6,6 +6,7 @@
 // marks the selected result with a className 'y'
 $('ol').click(function (e) {
     if (e.target.tagName === 'BUTTON') {
+        var resultString;
         const button = e.target;
         const li = button.parentNode.parentNode;
         const action = button.textContent;
@@ -17,12 +18,15 @@ $('ol').click(function (e) {
                     if (button.nextElementSibling.classList.contains('y')) {
                         button.nextElementSibling.classList.remove('y');
                         score -= points;
+                        // resultString = resultReplace('0', getRouteNumber(li.id), result.value);
                     }
                     button.classList.add('y');
                     score += points * 1.2;
+                    resultString = resultReplace('F', getRouteNumber(li.id), result.value);
                 } else {
                     button.classList.remove('y');
                     score -= points * 1.2;
+                    resultString = resultReplace('0', getRouteNumber(li.id), result.value);
                 }
             },
             Top: function () {
@@ -30,12 +34,15 @@ $('ol').click(function (e) {
                     if (button.previousElementSibling.classList.contains('y')) {
                         button.previousElementSibling.classList.remove('y');
                         score -= points * 1.2;
+                        // resultString = resultReplace('0', getRouteNumber(li.id), result.value);
                     }
                     button.classList.add('y');
                     score += points;
+                    resultString = resultReplace('T', getRouteNumber(li.id), result.value);
                 } else {
                     button.classList.remove('y');
                     score -= points;
+                    resultString = resultReplace('0', getRouteNumber(li.id), result.value);
                 }
             },
             "Special Challenge": function () {
@@ -52,6 +59,8 @@ $('ol').click(function (e) {
 
         nameActions[action]();
         $('.score').html(scoreDisplay(score));
+        result.value = resultString;
+        total.value = score;
     }
 }); //end button click
 

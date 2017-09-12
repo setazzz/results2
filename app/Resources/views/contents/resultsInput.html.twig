@@ -14,15 +14,23 @@
     <a href="results.php" target="_blank">Results</a>
     <div class="input-content">
 
-        {% include 'forms/userInput.html.twig' %}
+        {{ form_row(form.name) }}
+        {{ form_row(form.result) }}
+        {{ form_row(form.total) }}
+        {{ form_row(form.specChal) }}
+        {{ form_row(form.sex) }}
+        {{ form_row(form.pro) }}
+        {{ form_row(form.comp) }}
 
         {% set numberOfRoutes = comp.numberOfRoutes %}
+
 
         <div class="score" id="score-top"></div>
         {% include 'contents/buttons.html.twig' %}
         <p class="score"></p>
         <div class="entry-buttons">
-            <button class="clear">Clear</button><button class="submit">Submit</button>
+            <button class="clear">Clear</button>        {{ form_row(form.Submit) }}
+
         </div>
     </div>
     <p class="output"></p>

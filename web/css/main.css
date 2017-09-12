@@ -134,12 +134,12 @@ ol li {
     margin: 0 10%;
 }
 
-.submit, .clear{
-    width: 48%;
-    margin: 0 1%;
+#user_Submit, .clear{
+    width: 100%;
+    /*margin: 0 1%;*/
 }
 
-.submit {
+#user_Submit {
     background-color: green;
     border-color: darkgreen;
 }

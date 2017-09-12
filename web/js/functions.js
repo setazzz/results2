@@ -6,6 +6,18 @@ function scoreDisplay (flash) {
     return 'Your score: ' + flash;
 }
 
+function getRouteNumber(id) {
+    if (id.charAt(2) == 0) {
+        return parseInt(id.substr(3, 1));
+    } else {
+        return parseInt(id.substr(2, 2));
+    }
+}
+
+function resultReplace(char, index, result) {
+    return result.substr(0, index - 1) + char + result.substr(index)
+}
+
 function makeButtons(ammount) {
     var buttons = '<ol class="buttons">';
 
